@@ -1,11 +1,12 @@
 var rucksack = require('rucksack-css')
 var webpack = require('webpack')
 var path = require('path')
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
   context: path.join(__dirname, './src'),
   entry: {
-    jsx: './index.js',
+    app: './index.js',
     html: './index.html',
     vendor: [
       'jquery',
@@ -24,12 +25,7 @@ module.exports = {
       {
         test: /\.(css|scss|sass)$/,
         include: /src/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-          'postcss-loader'
-        ]
+        loader: ExtractTextPlugin.extract('style-loader', 'css!sass!postcss')
       },
       {
         test: /\.css$/,
@@ -57,7 +53,9 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') }
-    })
+    }),
+    new ExtractTextPlugin("styles.css")
+
   ],
   devServer: {
     contentBase: './client',

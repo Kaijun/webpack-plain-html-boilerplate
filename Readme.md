@@ -12,7 +12,7 @@
 - [x] [PostCSS](https://github.com/postcss/postcss)
 
 ## Optimization
-- [ ] [ExtractTextPlugin](https://github.com/webpack/extract-text-webpack-plugin) CSS is now rendered with delay ([ref](https://github.com/webpack/webpack/issues/1427)).
+- [x] [ExtractTextPlugin](https://github.com/webpack/extract-text-webpack-plugin) CSS is now rendered with delay ([ref](https://github.com/webpack/webpack/issues/1427)).
 
 
 ## Setup
