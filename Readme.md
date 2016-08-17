@@ -1,6 +1,7 @@
 
 # Webpack plain-html Boilerplate
 > Sometimes you just need webpack without any JavaScript frameworks bundled.
+
 ## Contains
 
 - [x] [Webpack](https://webpack.github.io)
