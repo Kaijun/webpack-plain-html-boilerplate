@@ -1,6 +1,7 @@
 
-# Webpack plain-html Boilerplate
+# Webpack plain HTML Boilerplate
 > Sometimes you just need webpack without any JavaScript frameworks bundled.
+
 ## Contains
 
 - [x] [Webpack](https://webpack.github.io)
@@ -12,7 +13,7 @@
 - [x] [PostCSS](https://github.com/postcss/postcss)
 
 ## Optimization
-- [x] [ExtractTextPlugin](https://github.com/webpack/extract-text-webpack-plugin) CSS is now rendered with delay ([ref](https://github.com/webpack/webpack/issues/1427)).
+- [x] [ExtractTextPlugin](https://github.com/webpack/extract-text-webpack-plugin) CSS is now rendered without delay ([ref](https://github.com/webpack/webpack/issues/1427)).
 - [x] Upgrade to Webpack 2
 - [ ] [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) for generating HTML / injecting assets automatically in HTML.
 
