@@ -7,9 +7,8 @@ module.exports = {
   context: path.join(__dirname, './src'),
   entry: {
     app: './index.js',
-    html: './index.html',
     vendor: [
-      'jquery',
+      // 'jquery',
     ]
   },
   output: {
@@ -25,7 +24,10 @@ module.exports = {
       {
         test: /\.(css|scss|sass)$/,
         include: /src/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css!sass!postcss')
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: "style",
+          loader: "css!sass!postcss"
+        })
       },
       {
         test: /\.css$/,
@@ -33,7 +35,7 @@ module.exports = {
         loader: 'style!css'
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
           'babel-loader'
@@ -42,7 +44,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js']
   },
   postcss: [
     rucksack({
@@ -50,7 +52,7 @@ module.exports = {
     })
   ],
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') }
     }),

@@ -13,6 +13,8 @@
 
 ## Optimization
 - [x] [ExtractTextPlugin](https://github.com/webpack/extract-text-webpack-plugin) CSS is now rendered with delay ([ref](https://github.com/webpack/webpack/issues/1427)).
+- [x] Upgrade to Webpack 2
+- [ ] [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) for generating HTML / injecting assets automatically in HTML.
 
 
 ## Setup
