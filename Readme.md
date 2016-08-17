@@ -1,5 +1,5 @@
 
-# Webpack plain-html Boilerplate
+# Webpack plain HTML Boilerplate
 > Sometimes you just need webpack without any JavaScript frameworks bundled.
 
 ## Contains
