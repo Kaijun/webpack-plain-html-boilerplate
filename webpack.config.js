@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     app: './index.js',
     vendor: [
-      // 'jquery',
+      'lodash',
     ]
   },
   output: {

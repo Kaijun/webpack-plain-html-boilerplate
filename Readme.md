@@ -6,7 +6,7 @@
 
 - [x] [Webpack](https://webpack.github.io)
 - [x] [Babel](https://babeljs.io/) - Multiple modules are imported in entry `index.js` using ES6
-- [x] [jquery](https://github.com/jquery/jquery) - As an example of importing vendor utility library
+- [x] [lodash](https://github.com/lodash/lodash) - As an example of importing vendor utility library
 - [x] [SaaS](https://github.com/jtangelder/sass-loader) - As an example of using CSS preprocessor: SaaS
 - [x] [Rucksack](http://simplaio.github.io/rucksack/docs)
 - [x] [Autoprefixer](https://github.com/postcss/autoprefixer)
